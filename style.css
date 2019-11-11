@@ -1,5 +1,4 @@
 /* @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap'); */
-@import url("https://fonts.googleapis.com/css?family=Arapey&display=swap");
 body {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -20,24 +19,36 @@ body {
   padding-right: 20px;
   margin-top: 5px;
 }
+
 .nav-item {
   flex: 1;
   padding: 35px 0px 20px 25px;
   color: white;
-  flex-direction: row;
   font-size: 1.8rem;
   font-weight: 400;
-  text-decoration: none;
+  text-decoration: none; 
 }
 .nav-item:last-child {
   padding-right: 30px;
 }
-.border {
-  width: 100vw;
-  height: 8px;
-  background-color: #fff;
-  margin-top: 10px;
+.nav-item:hover{
+  background-color:pink;
 }
+.toggle{
+  background-color: #895b5b;
+  padding:10px;
+  height:40px;
+  font-size: 39px;
+}
+.active{
+  display:block !important;
+}
+
+.border{
+  width:100vw;
+  height:8px;
+  background-color: #fff; 
+margin-top:10px}
 .landing-image:hover,
 .gallery:hover {
   /* filter: blur(6px); */
@@ -49,50 +60,35 @@ body {
   height: 40vh;
   /* opacity: 0.4; */
   position: relative;
+  
 }
 
-.landing-text {
-  /* position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  /* margin-top:0px;
-  
-  color:rgb(245, 229, 229);
-  text-shadow: 2px 2px 1px black;
-  font-size: 3.1rem;
-  font-weight: 600;
-  text-align: center;
-  align-content: center; */
-}
-.landing-text {
+.landing-text{
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   text-shadow: 2px 2px 1px black;
   font-size: 3.1rem;
   font-weight: 600;
   margin-top: 0%;
   padding-top: 0%;
-}
-.landing-text:first-child {
+  
+} 
+.landing-text:first-child{
   padding-top: 10vh;
-  font-family: "Arapey", serif;
-}
-.landing-text:last-child {
 }
 
-.teachers-name,
-.teachers-sub {
-  text-decoration: none;
+.teachers-name ,.teachers-sub{ 
+  text-decoration: none; 
   text-align: center;
-  margin: 0;
-  padding: 0;
-  color: rgb(211, 208, 208);
+  margin:0;
+  padding:0;
+  color:rgb(211, 208, 208);
+
 }
 
 .-item {
   /* flex: 1; */
-  margin: 5px;
+  margin:5px;
   /* box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .-img {
@@ -100,6 +96,8 @@ body {
   height: 250px;
   object-fit: cover;
 }
+
+
 
 .gallery {
   display: flex;
@@ -116,20 +114,21 @@ body {
 
 /* https://codepen.io/GeorgePark/pen/vdqYom */
 
-.footer {
+.footer{
   background-color: #895b5b;
   padding: 20px 0 10px 0;
   margin-top: 20px;
   margin-right: 0;
   /* display: flex; */
 }
-.footer-imge {
+.footer-imge{
   display: flex;
   height: 78px;
   justify-content: center;
 }
 
-.footer-img {
+.footer-img{
+ padding-left:9px;
 }
 .footer-text {
   text-align: center;
@@ -137,27 +136,58 @@ body {
   font-weight: 300;
   text-decoration: none;
 }
-@media screen and (min-width: 1650px) {
-  .logo {
+@media screen and (min-width:1650px){
+  .logo{
     flex: 4;
   }
 }
-@media screen and (max-width: 1170px) {
-  .logo {
+@media screen and (max-width:1170px){
+  .logo{
     flex: 2.5;
+  
   }
-  .nav-item {
+  .nav-item{
     font-size: 1.7rem;
   }
 }
 
-@media screen and (max-width: 800px) {
-  .landing-text {
-    font-size: 2.5rem;
+@media screen and (max-width: 800px){
+  .landing-text{
+    font-size:2.5rem;
+  }
+ 
+}
+@media screen and (max-width: 550px){
+  .landing-text{
+    font-size:2.1rem;
+  }
+} 
+@media screen and (max-width:768px){
+  .toggle{
+    display:block;
+  }
+  .logo { 
+    display:none;  
+  }
+  .navbar{
+    flex-direction: column;
+    text-align:center;
+  }
+  .nav-item{
+    padding:10px 0;
+    font-size: 1.8rem;
+  display:none;
+
+  }
+  .nav-item:last-child {
+    padding-right: 0;
+  }
+ 
+}
+
+@media screen and (min-width:768px){
+  .toggle{
+    display:none;
   }
 }
-@media screen and (max-width: 550px) {
-  .landing-text {
-    font-size: 2.1rem;
-  }
-}
+
